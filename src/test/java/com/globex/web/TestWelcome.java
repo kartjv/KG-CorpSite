@@ -37,6 +37,10 @@ public class TestWelcome {
     @Test
     public void testWelcome() throws Exception {
 
+        driver = new WebDriver(
+    new URL("https://greydonbuckley:2f495785-4532-487e-9dae-45cd889743a7@ondemand.us-west-1.saucelabs.com:443/wd/hub")
+);
+        
         this.mockMvc.perform(
                 get("/"))
                 .andDo(print())
