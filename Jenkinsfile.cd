@@ -14,7 +14,6 @@ pipeline {
               JENKINS = credentials('jenkins_user')
             }
             steps {
-                sh "echo Retrieving release artifact for version ${params.majorVersion}.${params.minorVersion}"
                 sh 'rm -rf globex-war'
                 script {
                     def server = Artifactory.server 'artifactory2'
@@ -34,7 +33,6 @@ pipeline {
             }
             
             steps {
-                sh "echo Deploying GlobEx version: ${params.majorVersion}.${params.minorVersion}"
                 snDevOpsChange()
                 sh 'curl -u $TOMCAT_USR:$TOMCAT_PSW --location --request PUT \'http://tomcat:8080/manager/text/deploy?path=/globex&war=globex-web.war&update=true\' --header \'Content-Type: application/java-archive\' --data-binary \'@globex-war/globex-web.war\''
             }
