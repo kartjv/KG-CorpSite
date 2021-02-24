@@ -24,7 +24,7 @@ pipeline {
                     }]}"""
                     server.download spec: downloadSpec
                 }                
-                snDevOpsPackage(name: "package", artifactsPayload: """{"artifacts": [{"name": "globex-web.war", "repositoryName": "corpsite", "pipelineName": "${env.JOB_BASE_NAME}", "version": "${majorVersion}.${minorVersion}"}]}""")
+                snDevOpsPackage(name: "package", artifactsPayload: """{"artifacts": [{"name": "globex-web.war", "repositoryName": "corpsite", "pipelineName": "${env.JOB_BASE_NAME}", "version": "1.${env.BUILD_NUMBER}"}]}""")
             }
         }
         stage('Prod') {
