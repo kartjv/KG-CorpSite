@@ -45,7 +45,7 @@ pipeline {
 
             steps {
                 sh 'echo publish stage'
-                snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "globex-web.war","version":"1.${env.BUILD_NUMBER}","semanticVersion": "1.${env.BUILD_NUMBER}.0","repositoryName": "corpsite","pipelineName": "CorpSiteCI","stageName": "CorpSiteCI#Build"}]}""")
+                snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "globex-web.war","version":"1.${env.BUILD_NUMBER}","semanticVersion": "1.${env.BUILD_NUMBER}.0","repositoryName": "corpsite"}]}""")
 
                 script {    
                     echo 'publishing to artifactory2'
