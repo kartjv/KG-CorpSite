@@ -61,7 +61,7 @@ pipeline {
                 )
                 
                 rtMavenRun (
-                  tool: "maven",
+                  tool: "Jenkins Maven",
                   pom: "pom.xml",
                   goals: " package",
                   deployerId: "MAVEN_DEPLOYER",
