@@ -60,6 +60,11 @@ pipeline {
                   snapshotRepo: "corpsite"
                 )
                 
+                sh '''
+                    export M2_HOME=/opt/apache-maven-3.6.0 # your Maven home path
+                    export PATH=$PATH:$M2_HOME/bin
+                '''
+                    
                 rtMavenRun (
                   tool: "Jenkins Maven",
                   pom: "pom.xml",
