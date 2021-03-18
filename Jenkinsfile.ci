@@ -63,7 +63,7 @@ pipeline {
                 rtMavenRun (
                   tool: "Jenkins Maven",
                   pom: "pom.xml",
-                  goals: " package",
+                  goals: " package -Dmaven.test.skip=true",
                   deployerId: "MAVEN_DEPLOYER",
                   resolverId: "MAVEN_RESOLVER"
                  )
