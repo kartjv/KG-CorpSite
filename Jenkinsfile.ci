@@ -60,6 +60,14 @@ pipeline {
                   snapshotRepo: "corpsite"
                 )
                 
+                rtMavenRun (
+                  tool: "maven",
+                  pom: "pom.xml",
+                  goals: " package",
+                  deployerId: "MAVEN_DEPLOYER",
+                  resolverId: "MAVEN_RESOLVER"
+                 )
+                
                 rtPublishBuildInfo (
                   serverId: "sndevops1",
                   buildName: "CorpSiteCI",
