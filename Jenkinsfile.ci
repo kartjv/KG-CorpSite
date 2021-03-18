@@ -49,7 +49,7 @@ pipeline {
 
                 script {    
                     echo 'publishing to artifactory2'
-                    def server = Artifactory.server 'artifactory2'
+                    def server = Artifactory.server 'sndevops1'
                     def uploadSpec = """{
                     "files": [
                     {
