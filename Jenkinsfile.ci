@@ -45,29 +45,26 @@ pipeline {
 
             steps {
                 //snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "globex-web.war","version":"1.${env.BUILD_NUMBER}","semanticVersion": "1.${env.BUILD_NUMBER}.0","repositoryName": "corpsite", "pipelineName": "${env.JOB_BASE_NAME}"}]}""")
-                rtServer {
-                  id: "sndevops1"
-                }
 
-                rtMavenDeployer {
+                rtMavenDeployer (
                   id: "MAVEN_DEPLOYER",
                   serverId: "sndevops1",
                   releaseRepo: "corpsite",
                   snapshotRepo: "corpsite"
-                }
+                )
                 
-                rtMavenResolver {
+                rtMavenResolver (
                   id: "MAVEN_RESOLVER",
                   serverId: "sndevops1",
                   releaseRepo: "corpsite",
                   snapshotRepo: "corpsite"
-                }
+                )
                 
-                rtPublishBuildInfo {
+                rtPublishBuildInfo (
                   serverId: "sndevops1",
                   buildName: "CorpSiteCI",
                   buildNumber: "${env.BUILD_NUMBER}"
-                }
+                )
 /*
                 script {    
                     echo 'publishing to artifactory2'
