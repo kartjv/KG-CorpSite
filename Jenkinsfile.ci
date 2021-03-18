@@ -53,13 +53,18 @@ pipeline {
                   snapshotRepo: "corpsite"
                 )
                 
+                rtMavenResolver (
+                  id: "MAVEN_RESOLVER",
+                  serverId: "sndevops1",
+                  releaseRepo: "corpsite",
+                  snapshotRepo: "corpsite"
+                )
                     
                 rtMavenRun (
                   tool: "Jenkins Maven",
                   pom: "pom.xml",
                   goals: " package -Dmaven.test.skip=true",
-                  deployerId: "MAVEN_DEPLOYER",
-                  resolverId: "MAVEN_RESOLVER"
+                  deployerId: "MAVEN_DEPLOYER"
                  )
                 
                 rtPublishBuildInfo (
