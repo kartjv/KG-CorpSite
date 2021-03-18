@@ -34,7 +34,7 @@ pipeline {
             
             steps {
                 snDevOpsChange()
-                sh 'curl -u $TOMCAT_USR:$TOMCAT_PSW --location --request PUT \'http://tomcat:8080/manager/text/deploy?path=/globex&war=globex-web.war&update=true\' --header \'Content-Type: application/java-archive\' --data-binary \'@com/globex/web/globex-web/1.0.0/globex-web.war\''
+                sh 'curl -u $TOMCAT_USR:$TOMCAT_PSW --location --request PUT \'http://tomcat:8080/manager/text/deploy?path=/globex&war=globex-web.war&update=true\' --header \'Content-Type: application/java-archive\' --data-binary \'@com/globex/web/globex-web/1.0.0/globex-web-1.0.0.war\''
             }
         }
     }
