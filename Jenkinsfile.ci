@@ -56,8 +56,8 @@ pipeline {
                 rtMavenResolver (
                   id: "MAVEN_RESOLVER",
                   serverId: "sndevops1",
-                  releaseRepo: "corpsite",
-                  snapshotRepo: "corpsite"
+                  releaseRepo: "libs-release",
+                  snapshotRepo: "libs-snapshot"
                 )
                 
                 sh '''
