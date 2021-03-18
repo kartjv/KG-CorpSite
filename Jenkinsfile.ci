@@ -70,7 +70,7 @@ pipeline {
                 rtPublishBuildInfo (
                   serverId: "sndevops1",
                   buildName: "CorpSiteCI",
-                  buildNumber: "1.${env.BUILD_NUMBER}"
+                  buildNumber: "${env.BUILD_NUMBER}"
                 )
 /*
                 script {    
