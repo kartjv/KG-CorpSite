@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'rm -rf globex-war'
                 script {
-                    def server = Artifactory.server 'artifactory2'
+                    def server = Artifactory.server 'sndevops1'
                     def downloadSpec = """{
                     "files": [
                     {
