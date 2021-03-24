@@ -20,7 +20,7 @@ pipeline {
                     def downloadSpec = """{
                     "files": [
                     {
-                        "pattern": "corpsite/com/globex/web/globex-web/1.0.0/globex-web-1.0.0.war/*.war"
+                        "pattern": "corpsite/com/globex/*.war"
                     }]}"""
                     server.download spec: downloadSpec
                 }                
