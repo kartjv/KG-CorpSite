@@ -66,12 +66,13 @@ pipeline {
                   goals: " package -Dmaven.test.skip=true",
                   deployerId: "MAVEN_DEPLOYER"
                  )
-                
+/*                
                 rtPublishBuildInfo (
                   serverId: "sndevops1",
                   buildName: "CorpSiteCI",
                   buildNumber: "${env.BUILD_NUMBER}"
                 )
+*/
 /*
                 script {    
                     echo 'publishing to artifactory2'
