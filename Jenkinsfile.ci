@@ -12,7 +12,7 @@ pipeline {
                     export PATH=$PATH:$M2_HOME/bin
                     mvn --version
                 '''
-                sh 'mvn clean compile'   
+                sh 'mvn compile'   
             }
         }
 
