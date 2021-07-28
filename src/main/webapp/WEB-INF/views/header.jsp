@@ -54,8 +54,6 @@
                                         </li>
                                         <li>
                                             <a href="#">Springfield</a>
-                                        </li><li>
-                                            <a href="#">Santa Clara</a>
                                         </li>
                                     </ul>
                                 </li>
