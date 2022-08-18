@@ -76,7 +76,7 @@ snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "globex-web.war","v
                     "files": [
                     {
                         "pattern": "target/*.war",
-                        "target": "corpsite/globex-war/"
+                        "target": "corpsite"
                     }]}"""
                     
                     //publish to Artifactory
