@@ -41,7 +41,7 @@ pipeline {
                     echo '(publishing artifact)'
                 }
                script {    
-                    echo 'publishing to artifactory'
+                    echo 'publishing to artifactory (greydon)'
                     def server = Artifactory.server 'greydon'
                     def uploadSpec = """{
                     "files": [
