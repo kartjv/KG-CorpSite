@@ -53,7 +53,7 @@
                                             <a href="#">Secret Mountain</a>
                                         </li>
                                         <li>
-                                            <a href="#">Springfield</a>
+                                            <a href="#">San Francisco</a>
                                         </li>
                                     </ul>
                                 </li>
