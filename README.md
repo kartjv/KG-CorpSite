@@ -6,3 +6,5 @@ This is a demo of a corporate website.  The goal is to show changes to this app 
 
 202005191744
 202207291613
+
+Added on Aug 19th
